@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "project from spotahome",
   "scripts": {
+    "start": "run-p start:*",
     "start:server": "cd ./server && npm run start",
     "start:client": "cd ./client && npm run start",
     "test": "run-p test:*",
