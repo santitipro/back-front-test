@@ -1,0 +1,23 @@
+{
+  "name": "spota",
+  "version": "1.0.0",
+  "description": "project from spotahome",
+  "scripts": {
+    "start:server": "cd ./server && npm run start",
+    "start:client": "cd ./client && npm run start",
+    "test": "run-p test:*",
+    "test:server": "cd ./server && npm run test",
+    "test:client": "cd ./client && npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run test"
+    }
+  },
+  "devDependencies": {
+    "husky": "^4.0.10",
+    "npm-run-all": "^4.1.5"
+  }
+}

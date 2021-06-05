@@ -1,0 +1,5 @@
+# OSX garbage
+**/.DS_Store
+
+# package directories
+**/node_modules
