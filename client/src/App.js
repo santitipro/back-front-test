@@ -1,7 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { getProperties } from "./services/properties.service";
 
 function App() {
+  useEffect(() => {
+    async function fetchData() {
+      const response = await getProperties();
+      console.log(response);
+    }
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">

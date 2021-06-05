@@ -6,7 +6,7 @@
     "start": "run-p start:*",
     "start:server": "cd ./server && npm run start",
     "start:client": "cd ./client && npm run start",
-    "test": "run-p test:*",
+    "test": "npm run test:server && npm run test:client",
     "test:server": "cd ./server && npm run test",
     "test:client": "cd ./client && npm run test"
   },
