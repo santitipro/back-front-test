@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+    server:
+        build: server/
+        command: npm start
+        ports:
+            - 8500:8500
+
+    client:
+        build: client/
+        command: npm start
+        ports:
+            - 3000:3000
+        depends_on:
+            - server
