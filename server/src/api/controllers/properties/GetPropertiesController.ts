@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { inject, injectable } from "inversify";
-import { GetPropertiesUseCase } from "~/modules/properties/application/GetPropertiesUseCase";
+import { GetPropertiesUseCase } from "../../../modules/properties/application/GetPropertiesUseCase";
 import { Controller } from "../Controller";
 //
 
@@ -21,7 +21,7 @@ export class GetPropertiesController implements Controller {
       if (isNaN(s) || isNaN(l)) {
         res.status(400).send({ error: 'Invalid params' });
       }
-      const properties = await this.getPropertiesUseCase.execute({start:s, limit: l});
+      const properties = await this.getPropertiesUseCase.execute({start: s, limit: l});
       res.send(properties);
     } catch (err) {
       res.status(500).send({ error: err.message });
