@@ -5,7 +5,7 @@ import "./styles.css";
 import PropertiesService from "../../services/properties.service";
 
 function Home() {
-  const { isLoading, data } = useQuery(
+  const { isLoading, error, data } = useQuery(
     "repoData",
     PropertiesService.getProperties
   );
@@ -33,6 +33,8 @@ function Home() {
         <div>
           {isLoading ? (
             <p>Loading properties...</p>
+          ) : error ? (
+            <p>Error loading properties...</p>
           ) : (
             <PropertiesTable properties={data.properties} />
           )}
