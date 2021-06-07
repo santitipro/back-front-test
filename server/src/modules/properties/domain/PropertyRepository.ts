@@ -1,5 +1,5 @@
-import { Property } from "./Property";
+import { Property } from './Property'
 
 export interface PropertyRepository {
-  getAll(start: number, limit: number): Promise<Property[]>;
+  getAll(start: number, limit: number): Promise<Property[]>
 }

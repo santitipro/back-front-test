@@ -1,22 +1,22 @@
-import { DomainEvent } from './DomainEvent';
+import { DomainEvent } from './DomainEvent'
 
 export abstract class AggregateRoot {
-  private domainEvents: Array<DomainEvent>;
+  private domainEvents: Array<DomainEvent>
 
   constructor() {
-    this.domainEvents = [];
+    this.domainEvents = []
   }
 
   pullDomainEvents(): Array<DomainEvent> {
-    const domainEvents = this.domainEvents.slice();
-    this.domainEvents = [];
+    const domainEvents = this.domainEvents.slice()
+    this.domainEvents = []
 
-    return domainEvents;
+    return domainEvents
   }
 
   record(event: DomainEvent): void {
-    this.domainEvents.push(event);
+    this.domainEvents.push(event)
   }
 
-  abstract toPrimitives(): any;
+  abstract toPrimitives(): any
 }

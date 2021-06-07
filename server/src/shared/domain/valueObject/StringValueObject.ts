@@ -1,11 +1,11 @@
 export abstract class StringValueObject {
-  readonly value: string;
+  readonly value: string
 
   constructor(value: string) {
-    this.value = value;
+    this.value = value
   }
 
   toString(): string {
-    return this.value;
+    return this.value
   }
 }
