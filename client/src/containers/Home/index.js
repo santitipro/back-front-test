@@ -1,32 +1,42 @@
-import { useEffect } from "react";
+import { useQuery } from "react-query";
 import logo from "../../assets/icons/logo.svg";
+import { PropertiesTable } from "../../components";
 import "./styles.css";
 import PropertiesService from "../../services/properties.service";
 
 function Home() {
-  useEffect(() => {
-    async function fetchData() {
-      const response = await PropertiesService.getProperties();
-      console.log(response);
-    }
-    fetchData();
-  }, []);
+  const { isLoading, data } = useQuery(
+    "repoData",
+    PropertiesService.getProperties
+  );
+
+  // Or
+
+  // useEffect(() => {
+  //   PropertiesService.getProperties().then(setProperties);
+  // }, []);
+
+  // Or
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const properties = await PropertiesService.getProperties();
+  //     setProperties(properties);
+  //   }
+  //   fetchData();
+  // }, []);
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          {isLoading ? (
+            <p>Loading properties...</p>
+          ) : (
+            <PropertiesTable properties={data.properties} />
+          )}
+        </div>
       </header>
     </div>
   );
