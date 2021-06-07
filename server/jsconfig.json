@@ -10,5 +10,5 @@
       "~/*": ["./*"]
     }
   },
-  "exclude": ["build", "node_modules", "static"]
+  "exclude": ["dist", "node_modules"]
 }
