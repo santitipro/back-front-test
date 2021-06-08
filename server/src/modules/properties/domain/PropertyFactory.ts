@@ -11,8 +11,12 @@ type PropertyData = {
   images: Array<string>
 }
 
+interface IPropertyFactory {
+  create(data: PropertyData): Property
+}
+
 @injectable()
-export class PropertyFactory {
+export class PropertyFactory implements IPropertyFactory {
   create({ id, title, link, address, city, images }: PropertyData): Property {
     const propertyId = id ? new PropertyId(id) : PropertyId.random()
     const property = new Property(propertyId, title, link, address, city, images)
