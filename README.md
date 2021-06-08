@@ -1,10 +1,10 @@
-# Spota application
+# Spota application :cowboy_hat_face:
 
 This is a monorepo that contain server and client application
 
-## Start
+## Start :rocket:
 
-**Start with docker**
+**Start with docker** :ok_hand:
 
 ``` bash
 docker-compose up
@@ -28,7 +28,7 @@ npm run start:client
 npm run start
 ```
 
-## Installation
+## Installation :computer:
 
 Install the npm packages in root mono repo application
 
@@ -36,7 +36,7 @@ Install the npm packages in root mono repo application
 npm install
 ```
 
-## Consierations
+## Consierations :books:
 
 ### **Server**
 
