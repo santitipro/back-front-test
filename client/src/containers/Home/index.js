@@ -1,14 +1,10 @@
-import { useQuery } from "react-query";
 import logo from "../../assets/icons/logo.svg";
 import { PropertiesTable } from "../../components";
+import { useProperties } from "../../hooks/useProperties";
 import "./styles.css";
-import PropertiesService from "../../services/properties.service";
 
 function Home() {
-  const { isLoading, error, data } = useQuery(
-    "repoData",
-    PropertiesService.getProperties
-  );
+  const { isLoading, error, data } = useProperties();
 
   // Or
 

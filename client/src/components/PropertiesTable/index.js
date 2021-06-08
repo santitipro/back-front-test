@@ -66,7 +66,7 @@ const PropertiesTable = ({ properties }) => {
     );
 
   return (
-    <table {...getTableProps()}>
+    <table data-testid="propertiesTable" {...getTableProps()}>
       <thead>
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()}>
