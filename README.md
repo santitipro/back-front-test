@@ -39,7 +39,7 @@ npm install
 ## Consierations :books:
 
 - Used **husky** :wolf: for pre-push run all tests
-- Used **docker compose* :whale: for container server and client
+- Used **docker compose** :whale: for container server and client
 
 ### **Server**
 
