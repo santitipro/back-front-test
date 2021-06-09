@@ -1,4 +1,4 @@
-import logo from "../../assets/icons/logo.svg";
+import logo from "../../assets/icons/spotahome_logo.png";
 import { PropertiesTable } from "../../components";
 import { useProperties } from "../../hooks/useProperties";
 import { Wrapper } from "./styles";
@@ -26,7 +26,7 @@ function Home() {
     <Wrapper>
       <div className="content">
         <img src={logo} className="logo" alt="logo" />
-        <div>
+        <div className="content-wrapper">
           {isLoading ? (
             <p>Loading properties...</p>
           ) : error ? (
