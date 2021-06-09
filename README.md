@@ -53,6 +53,7 @@ npm install
 
 ### **Client**
 
+- Its necesary configure (webpack) a process.env variables for deploy in different environment
 - I use create react app because is a simple aplication, but y prefer use react whitout this, and use custom webpack, jest, babel...
 - We can create a redux funcionality, but for this example its very simple for create this structure
 - We can use styled-components for doing a styles

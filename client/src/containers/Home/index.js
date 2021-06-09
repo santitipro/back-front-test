@@ -1,7 +1,7 @@
 import logo from "../../assets/icons/logo.svg";
 import { PropertiesTable } from "../../components";
 import { useProperties } from "../../hooks/useProperties";
-import "./styles.css";
+import { Wrapper } from "./styles";
 
 function Home() {
   const { isLoading, error, data } = useProperties();
@@ -23,9 +23,9 @@ function Home() {
   // }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <Wrapper>
+      <div className="content">
+        <img src={logo} className="logo" alt="logo" />
         <div>
           {isLoading ? (
             <p>Loading properties...</p>
@@ -35,8 +35,8 @@ function Home() {
             <PropertiesTable properties={data.properties} />
           )}
         </div>
-      </header>
-    </div>
+      </div>
+    </Wrapper>
   );
 }
 
