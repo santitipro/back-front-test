@@ -2,6 +2,10 @@
 
 This is a monorepo that contain server and client application
 
+## Note :warning:
+
+**If you run project in local, remember enabled CORS in your browser**
+
 ## Start :rocket:
 
 **Start with docker** :ok_hand:
@@ -35,10 +39,6 @@ Install the npm packages in root mono repo application
 ``` bash
 npm install
 ```
-
-## Note :warning:
-
-**If you run project in local, remember enabled CORS in your browser**
 
 ## Consierations :books:
 
