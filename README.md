@@ -36,6 +36,10 @@ Install the npm packages in root mono repo application
 npm install
 ```
 
+## Note
+
+:warning: **If you run project in local, remember enabled CORS in your browser**
+
 ## Consierations :books:
 
 - Used **husky** :wolf:  for pre-push run all tests

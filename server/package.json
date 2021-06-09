@@ -1,7 +1,7 @@
 {
-  "name": "croupons-api",
+  "name": "spota-api",
   "version": "0.1.0",
-  "description": "A TypeScript starter for Serverless Framework",
+  "description": "A TypeScript api for spota app",
   "main": "dist/api/server.js",
   "scripts": {
     "start": "tsc  && PORT=8500 ts-node -r tsconfig-paths/register dist/api/server.js",
