@@ -4,8 +4,8 @@
   "description": "A TypeScript api for spota app",
   "main": "dist/api/server.js",
   "scripts": {
-    "start": "npx tsc && PORT=8500 ts-node -r tsconfig-paths/register dist/api/server.js",
-    "start:watch": "ts-node-dev --respawn -- src/api/server.ts",
+    "start": "npx tsc && PORT=8500 ts-node -r tsconfig-paths/register dist/src/api/server.js",
+    "start:watch": "PORT=8500 ts-node-dev -r tsconfig-paths/register --respawn -- src/api/server.ts",
     "build": "tsc",
     "test": "jest",
     "lint": "eslint src",
