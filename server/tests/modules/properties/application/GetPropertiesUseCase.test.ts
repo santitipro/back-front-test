@@ -1,8 +1,8 @@
 import { instance, mock, reset, verify, when, anyNumber } from 'ts-mockito'
-import { GetPropertiesRequest } from '~/modules/properties/application/GetPropertiesRequest'
-import { GetPropertiesResponse } from '~/modules/properties/application/GetPropertiesResponse'
+import { GetPropertiesRequest } from '~/modules/properties/application/useCases/getAll/GetPropertiesRequest'
+import { GetPropertiesResponse } from '~/modules/properties/application/useCases/getAll/GetPropertiesResponse'
+import { GetPropertiesUseCase } from '~/modules/properties/application/useCases/getAll/GetPropertiesUseCase'
 
-import { GetPropertiesUseCase } from '~/modules/properties/application/GetPropertiesUseCase'
 import { Property } from '~/modules/properties/domain/Property'
 import { PropertyRepository } from '~/modules/properties/domain/PropertyRepository'
 

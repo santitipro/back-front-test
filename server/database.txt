@@ -1,0 +1,12 @@
+CREATE SCHEMA `tfg_pablo` ;
+
+CREATE TABLE `tfg_pablo`.`logs` (
+  `id` VARCHAR(100) NOT NULL,
+  `tempHight` INT NULL,
+  `tempLow` INT NULL,
+  `weightDepositHight` INT NULL,
+  `weightDepositLow` INT NULL,
+  PRIMARY KEY (`id`));
+
+ALTER TABLE `tfg_pablo`.`logs` 
+CHANGE COLUMN `pTemp` `pTemp` FLOAT NULL DEFAULT NULL ;

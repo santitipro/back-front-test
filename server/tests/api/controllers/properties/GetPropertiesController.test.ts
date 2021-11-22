@@ -2,8 +2,9 @@ import { mockRequest, mockResponse } from 'mock-req-res'
 import { deepEqual, instance, mock, reset, verify, when } from 'ts-mockito'
 
 import { GetPropertiesController } from '~/api/controllers/properties/GetPropertiesController'
-import { GetPropertiesResponse } from '~/modules/properties/application/GetPropertiesResponse'
-import { GetPropertiesUseCase } from '~/modules/properties/application/GetPropertiesUseCase'
+import { GetPropertiesResponse } from '~/modules/properties/application/useCases/getAll/GetPropertiesResponse'
+import { GetPropertiesUseCase } from '~/modules/properties/application/useCases/getAll/GetPropertiesUseCase'
+
 import { Property } from '~/modules/properties/domain/Property'
 
 describe('Test GetPropertiesController', () => {
